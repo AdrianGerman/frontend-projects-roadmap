@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Pagina web de practica frontend de la wen de roadmap"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single Page CV</title>
+
+    <!-- Etiquetas Open Graph -->
+    <meta property="og:title" content="Single Page CV de Adrian Germán" />
+    <meta
+      property="og:description"
+      content="Conoce el CV de Adrian Germán, Junior FullStack Developer con experiencia en desarrollo web."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://adriangerman.com/" />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/AdrianGerman/Portfolio/refs/heads/main/img/me-purple.png"
+    />
+    <meta property="og:site_name" content="Single Page CV" />
+    <meta property="og:locale" content="es_ES" />
+
+    <style>
+      body {
+        background-color: #242424;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cv {
+        background-color: #323232;
+        max-width: 1000px;
+        padding: 1rem 6rem 1rem 3rem;
+        border-radius: 8px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      label {
+        color: rgb(14, 159, 115);
+        font-weight: bold;
+        font-size: 20px;
+        text-decoration: underline;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin: 0;
+        margin-bottom: 10px;
+      }
+
+      h4 {
+        font-size: 16px;
+        margin: 0;
+      }
+
+      .info {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .info p {
+        margin: 0;
+      }
+
+      .presentation {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0 1rem 0;
+        margin-bottom: 1rem;
+      }
+
+      .presentation img {
+        width: 100px;
+        height: 100px;
+        border-radius: 777px;
+      }
+
+      .link-icons {
+        margin-top: 1rem;
+        display: flex;
+        gap: 2rem;
+      }
+
+      .subtitle {
+        font-weight: bold;
+        color: #5b74af;
+        font-size: 18px;
+      }
+
+      .link-icons a {
+        text-decoration: none;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="cv">
+      <hr />
+      <section class="presentation">
+        <img
+          src="https://raw.githubusercontent.com/AdrianGerman/Portfolio/refs/heads/main/img/me-purple.png"
+          alt="imagen de perfil"
+        />
+        <section>
+          <h1>Adrian Germán</h1>
+          <h4>Junior FullStack Developer</h4>
+        </section>
+      </section>
+      <section class="info">
+        <p>Guadalajara, Jalisco</p>
+        <p>México</p>
+        <p>(123) 456-7890</p>
+        <p>no_reply@example.com</p>
+      </section>
+      <br />
+
+      <label>Habilidades</label>
+      <p>HTML, CSS, JavaScript, Python, Java, React, Vuejs, PHP</p>
+
+      <br />
+      <label>Educación</label>
+      <p class="subtitle">Universidad de Guadalajara - Titulado</p>
+      <p>Licenciatura en tecnologías de la información</p>
+      <ul>
+        <li>Diseñar, desarrollar e implementar, soluciones informáticas</li>
+        <li>
+          Análisis de problemas con un pensamiento lógico para proponer
+          soluciones
+        </li>
+        <li>
+          Manejo de bases de datos para una correcta gestión de la información
+        </li>
+      </ul>
+      <br />
+
+      <label>Experiencia</label>
+      <p class="subtitle">UdG, Frontend developer</p>
+      <p>Enero 2023 - Enero 2024</p>
+      <ul>
+        <li>
+          Desarrollo de aplicaciones web para cubrir necesidades especificas
+        </li>
+        <li>Desarrollo php y Vuejs</li>
+        <li>Creación de aplicativos para automatizar tareas</li>
+      </ul>
+      <p class="subtitle">Desarrollador Platzi</p>
+      <p>Febrero 2024 - Octubre 2024</p>
+      <ul>
+        <li>JavaScript a profundidad</li>
+        <li>
+          Utilización de frameworks de JavaScript (React,Vuejs, Angular, Nextjs)
+        </li>
+        <li>Python para backend, FastAPI, Flask</li>
+        <li>HTML y CSS a profundidad</li>
+      </ul>
+
+      <label>Conóceme un poco más</label>
+      <div class="link-icons">
+        <a href="https://www.linkedin.com/in/adrian-german/" target="_blank"
+          ><svg
+            width="44"
+            height="44"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+            />
+            <path d="M8 11l0 5" />
+            <path d="M8 8l0 .01" />
+            <path d="M12 16l0 -5" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" /></svg
+        ></a>
+        <a href="https://github.com/adrianGerman" target="_blank"
+          ><svg
+            width="44"
+            height="44"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+            /></svg
+        ></a>
+        <a href="https://x.com/HeimCode" target="_blank"
+          ><svg
+            width="44"
+            height="44"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+            <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg
+        ></a>
+      </div>
+    </section>
+  </body>
+</html>
