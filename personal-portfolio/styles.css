@@ -47,7 +47,6 @@ nav ul li a:hover {
   align-items: center;
   flex-direction: column;
   max-height: 50dvh;
-  height: 30dvh;
   padding: 2rem;
   text-align: center;
   margin: 0 auto;
@@ -59,9 +58,9 @@ nav ul li a:hover {
 }
 
 .personal-info {
-  height: 50dvh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 5rem;
 }
 
 .info {
@@ -90,8 +89,7 @@ nav ul li a:hover {
   color: #5db7f3;
 }
 
-.info,
-.projects-info {
+.info {
   padding: 1rem 1rem 1rem 0.5rem;
 }
 
@@ -100,12 +98,12 @@ label {
 }
 
 .reviews {
-  height: 50dvh;
   justify-content: center;
   align-items: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+  margin-bottom: 5rem;
 }
 
 .reviews div {
@@ -128,8 +126,7 @@ footer {
 }
 
 .router {
-  padding: 8rem 0 8rem 0;
-  height: 80dvh;
+  padding: 8rem 1rem 8rem 1rem;
 }
 
 /* formulario */
@@ -197,4 +194,50 @@ button:hover {
 
 textarea {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 700px) {
+  .personal-info {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .reviews {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projects-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+  }
+
+  .info:first-child {
+    padding: 0;
+  }
+
+  .projects-info {
+    border: 1px solid white;
+    padding: 0.5rem 0.5rem 0.5rem 0.2rem;
+  }
+}
+
+@media (max-width: 470px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+  }
+  header section,
+  header nav ul {
+    padding: 0;
+  }
+
+  .personal-info {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .reviews {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .reviews div {
+    height: 190px;
+  }
 }
