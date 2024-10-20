@@ -2,8 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Changelog component</title>
+    <title>Changelog Component</title>
     <style>
       * {
         box-sizing: border-box;
@@ -17,7 +16,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100dvh;
+        min-height: 100vh;
         margin: 0;
       }
       .changelog-container {
@@ -42,44 +41,34 @@
       }
 
       .changelog {
-        display: flex;
-        flex-direction: row;
-        gap: 40px;
+        position: relative;
         width: fit-content;
         margin: 0 auto;
-      }
-
-      .changelog-dates {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 150px;
-        text-align: right;
-        color: #888;
-        font-size: 0.9em;
-      }
-
-      .changelog-content {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        flex: 1;
-        gap: 20px;
       }
 
       .changelog-line {
         position: absolute;
         top: 0;
         bottom: 0;
-        left: 5px;
+        left: calc(150px + 20px);
         width: 2px;
         background: #fff;
       }
+
       .changelog-item {
-        display: flex;
-        align-items: center;
-        gap: 20px;
+        display: grid;
+        grid-template-columns: 150px 30px 1fr;
+        gap: 15px;
+        align-items: start;
+        margin: 20px 0 20px 0;
       }
+
+      .changelog-date {
+        text-align: right;
+        color: #888;
+        font-size: 0.9em;
+      }
+
       .changelog-point {
         width: 12px;
         height: 12px;
@@ -87,10 +76,11 @@
         border-radius: 50%;
         position: relative;
       }
+
       .changelog-description {
-        flex: 1;
         font-size: 1.1em;
       }
+
       .changelog-button {
         display: block;
         text-align: center;
@@ -103,9 +93,30 @@
         width: fit-content;
         transition: transform 0.3s ease;
       }
+
       .changelog-button:hover {
         background: #bbb;
         transform: scale(1.1);
+      }
+
+      @media (max-width: 600px) {
+        .changelog-item {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto auto;
+        }
+
+        .changelog-date {
+          text-align: left;
+        }
+
+        .changelog-line {
+          display: none;
+        }
+
+        .changelog-point {
+          margin-left: 0;
+          margin-top: 10px;
+        }
       }
     </style>
   </head>
@@ -116,59 +127,54 @@
         Aquí se muestran los cambios que se han enviado en los últimos días
       </p>
       <div class="changelog">
-        <div class="changelog-dates">
-          <p>03 Septiembre de 2024</p>
-          <p>28 Agosto de 2024</p>
-          <p>25 Agosto de 2024</p>
-          <p>22 Agosto de 2024</p>
-          <p>15 Agosto de 2024</p>
-          <p>10 Agosto de 2024</p>
-          <p>01 Agosto de 2024</p>
+        <div class="changelog-line"></div>
+        <div class="changelog-item">
+          <div class="changelog-date">03 Septiembre de 2024</div>
+          <div class="changelog-point"></div>
+          <div class="changelog-description">
+            Publicación del proyecto en la plataforma
+          </div>
         </div>
-        <div class="changelog-content">
-          <div class="changelog-line"></div>
-          <div class="changelog-item">
-            <div class="changelog-point"></div>
-            <p class="changelog-description">
-              Publicación del proyecto en la plataforma
-            </p>
+        <div class="changelog-item">
+          <div class="changelog-date">28 Agosto de 2024</div>
+          <div class="changelog-point"></div>
+          <div class="changelog-description">
+            Build final del proyecto antes de la revisión
           </div>
-          <div class="changelog-item">
-            <div class="changelog-point"></div>
-            <p class="changelog-description">
-              Build final del proyecto antes de la revisión
-            </p>
+        </div>
+        <div class="changelog-item">
+          <div class="changelog-date">25 Agosto de 2024</div>
+          <div class="changelog-point"></div>
+          <div class="changelog-description">
+            Unión de las ramas correspondientes para el main final
           </div>
-          <div class="changelog-item">
-            <div class="changelog-point"></div>
-            <p class="changelog-description">
-              Union de las ramas correspondientes para el main final
-            </p>
+        </div>
+        <div class="changelog-item">
+          <div class="changelog-date">22 Agosto de 2024</div>
+          <div class="changelog-point"></div>
+          <div class="changelog-description">
+            Últimas pruebas de calidad del proyecto
           </div>
-          <div class="changelog-item">
-            <div class="changelog-point"></div>
-            <p class="changelog-description">
-              Ultimas pruebas de calidad del proyecto
-            </p>
+        </div>
+        <div class="changelog-item">
+          <div class="changelog-date">15 Agosto de 2024</div>
+          <div class="changelog-point"></div>
+          <div class="changelog-description">
+            Levantamiento de los requisitos para solución de errores
           </div>
-          <div class="changelog-item">
-            <div class="changelog-point"></div>
-            <p class="changelog-description">
-              Levantamiento de los requisitos para solución de errores
-            </p>
+        </div>
+        <div class="changelog-item">
+          <div class="changelog-date">10 Agosto de 2024</div>
+          <div class="changelog-point"></div>
+          <div class="changelog-description">
+            Entrega de los bocetos basados en las ideas gráficas proporcionadas
           </div>
-          <div class="changelog-item">
-            <div class="changelog-point"></div>
-            <p class="changelog-description">
-              Entrega de los bocetos basados en las ideas gráficas
-              proporcionadas
-            </p>
-          </div>
-          <div class="changelog-item">
-            <div class="changelog-point"></div>
-            <p class="changelog-description">
-              Creación del apartada para el nuevo proyecto en desarrollo
-            </p>
+        </div>
+        <div class="changelog-item">
+          <div class="changelog-date">01 Agosto de 2024</div>
+          <div class="changelog-point"></div>
+          <div class="changelog-description">
+            Creación del apartado para el nuevo proyecto en desarrollo
           </div>
         </div>
       </div>
