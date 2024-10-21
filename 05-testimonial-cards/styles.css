@@ -13,9 +13,14 @@ main {
   gap: 2rem;
 }
 
+.part-one {
+  display: flex;
+  gap: 1rem;
+  width: 600px;
+}
+
 .card-one {
   width: 300px;
-  padding: 20px;
 }
 
 .card-one .text-content {
