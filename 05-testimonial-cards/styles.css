@@ -71,3 +71,50 @@ main {
 .card-two .card-info {
   margin: 20px 0 10px 0;
 }
+
+/* card three */
+
+.card-three {
+  width: 600px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-three .image-card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+}
+
+.card-three .text-card {
+  background: #000;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.card-three .info p,
+h2 {
+  margin: 0;
+}
+
+.card-three .info h2 {
+  margin-bottom: 6px;
+}
+
+.card-three .text-card .info p {
+  color: #6c6c6c;
+  font-size: 16px;
+}
+
+.card-three .info {
+  margin: 16px 0 16px 0;
+}
+
+.card-three .text-info {
+  font-size: 14px;
+}
+
+.stars {
+  color: #f4c035;
+}
