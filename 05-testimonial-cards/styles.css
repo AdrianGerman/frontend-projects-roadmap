@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #242424;
   color: white;
@@ -122,4 +126,45 @@ h2 {
 
 .stars {
   color: #f4c035;
+}
+
+/* card four */
+
+.card-four {
+  width: 600px;
+  border: 1px solid white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.card-four .text-info {
+  width: 400px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.card-four .image-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-four .image-info img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.card-four .image-info img:nth-child(2),
+.card-four .image-info img:nth-child(4) {
+  width: 50px;
+  height: 50px;
+  opacity: 0.6;
+}
+
+.card-four .image-info svg {
+  cursor: pointer;
 }
