@@ -10,3 +10,50 @@ main {
   justify-content: center;
   align-items: center;
 }
+
+.card-one {
+  border: 1px solid white;
+  width: 300px;
+  padding: 20px;
+}
+
+.card-one .text-content {
+  background-color: black;
+  padding: 12px;
+  border-radius: 12px;
+  position: relative;
+}
+
+.card-one .bubble-arrow {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #000;
+  position: absolute;
+  bottom: -14px;
+  left: 20px;
+}
+
+.card-one img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.card-one .card-info {
+  margin: 20px 0 10px 5px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-one .card-info p {
+  margin: 4px;
+}
+
+.card-one .card-info p:nth-of-type(2) {
+  font-size: 12px;
+}
