@@ -7,12 +7,13 @@ body {
 main {
   height: 100dvh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
 
 .card-one {
-  border: 1px solid white;
   width: 300px;
   padding: 20px;
 }
@@ -35,14 +36,14 @@ main {
   left: 20px;
 }
 
-.card-one img {
+.card-info img {
   width: 64px;
   height: 64px;
   object-fit: cover;
   border-radius: 50%;
 }
 
-.card-one .card-info {
+.card-info {
   margin: 20px 0 10px 5px;
   display: flex;
   justify-content: start;
@@ -50,10 +51,23 @@ main {
   gap: 10px;
 }
 
-.card-one .card-info p {
+.card-info p {
   margin: 4px;
 }
 
-.card-one .card-info p:nth-of-type(2) {
+.card-info p:nth-of-type(2) {
   font-size: 12px;
+}
+
+/* card two */
+
+.card-two {
+  border: 1px solid white;
+  width: 300px;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.card-two .card-info {
+  margin: 20px 0 10px 0;
 }
