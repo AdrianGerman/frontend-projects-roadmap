@@ -12,6 +12,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 3rem;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -21,16 +22,13 @@ main {
 .form .form-container {
   display: flex;
   flex-direction: column;
-}
-
-.form .form-container {
   margin-bottom: 15px;
 }
 
 .form .form-container label {
   display: block;
   margin-bottom: 5px;
-  font-weight: bold;
+  font-size: 14px;
 }
 
 .form .form-container input {
@@ -41,6 +39,7 @@ main {
   box-sizing: border-box;
   background-color: #323232;
   color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .form .form-container .password-input {
@@ -48,6 +47,7 @@ main {
 }
 
 .form .form-container .toggle-password {
+  display: flex;
   position: absolute;
   right: 0;
   top: 50%;
@@ -69,6 +69,7 @@ main {
   cursor: pointer;
   font-size: 14px;
   transition: transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .form .update-button:hover {
@@ -112,6 +113,7 @@ main {
 .progress-container .task-list ul {
   list-style: none;
   background-color: #202020;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding: 10px;
   border-radius: 10px;
   font-size: 12px;
