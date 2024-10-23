@@ -18,12 +18,6 @@ main {
   background-color: #323232;
 }
 
-/* .form button {
-  background: 0;
-  border: none;
-  cursor: pointer;
-} */
-
 .form .form-container {
   display: flex;
   flex-direction: column;
@@ -79,4 +73,59 @@ main {
 
 .form .update-button:hover {
   transform: scale(1.1);
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress-container .progress-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: conic-gradient(#323232 180deg, #eee 0deg);
+  box-shadow: inset 0px 0px 19px 0px #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-container .progress-circle::before {
+  content: "77%";
+  width: 60px;
+  height: 60px;
+  background: #323232;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.progress-container .task-list h3 {
+  text-align: center;
+}
+
+.progress-container .task-list ul {
+  list-style: none;
+  background-color: #202020;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.progress-container .task-list li {
+  margin-bottom: 5px;
+}
+
+.task-list li.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+.task-list li::before {
+  content: "✓";
+  margin-right: 5px;
 }
