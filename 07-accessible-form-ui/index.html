@@ -2,28 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="componente realizado para ser funcional a futuro con js, formulario básico de completar de un perfil, cuenta o usuario"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accessible Form UI</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <main>
-      <section class="form">
+      <form class="form">
         <div class="form-container">
-          <label for="full-name">Nombre completo:</label>
-          <input type="text" />
+          <label for="fullname">Nombre completo:</label>
+          <input name="fullname" id="fullname" type="text" required />
         </div>
 
         <div class="form-container password-container">
           <label for="email">Correo electrónico:</label>
-          <input type="email" />
+          <input name="email address" id="email" type="email" required />
         </div>
 
         <div class="form-container password-container">
           <label for="password">Contraseña:</label>
           <div class="password-input">
-            <input type="password" />
-            <button class="toggle-password">
+            <input name="password" id="password" type="password" required />
+            <button class="toggle-password" aria-label="mostrar contraseña">
               <svg
                 width="24"
                 height="24"
@@ -47,8 +51,13 @@
         <div class="form-container">
           <label for="confirm-password">Confirmar contraseña:</label>
           <div class="password-input">
-            <input type="password" />
-            <button class="toggle-password">
+            <input
+              name="repeat password"
+              id="confirm-password"
+              type="password"
+              required
+            />
+            <button class="toggle-password" aria-label="mostrar contraseña">
               <svg
                 width="24"
                 height="24"
@@ -69,8 +78,8 @@
           </div>
         </div>
 
-        <button class="update-button">Actualizar perfil</button>
-      </section>
+        <button type="submit" class="update-button">Actualizar perfil</button>
+      </form>
 
       <section class="progress-container">
         <div class="progress-circle"></div>
