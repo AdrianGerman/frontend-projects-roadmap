@@ -18,13 +18,65 @@ main {
   background-color: #323232;
 }
 
-.form button {
+/* .form button {
   background: 0;
   border: none;
   cursor: pointer;
-}
+} */
 
 .form .form-container {
   display: flex;
   flex-direction: column;
+}
+
+.form .form-container {
+  margin-bottom: 15px;
+}
+
+.form .form-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form .form-container input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid white;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #323232;
+  color: white;
+}
+
+.form .form-container .password-input {
+  position: relative;
+}
+
+.form .form-container .toggle-password {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.form .update-button {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.form .update-button:hover {
+  transform: scale(1.1);
 }
