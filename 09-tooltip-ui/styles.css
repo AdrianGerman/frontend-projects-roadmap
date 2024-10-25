@@ -25,32 +25,39 @@ header ul li {
   cursor: pointer;
 }
 
-header ul li:hover::after {
-  content: "Here is everything I have built";
+header ul li::after,
+header ul li::before {
+  content: "";
   position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+header ul li::after {
+  content: "Here is everything I have built";
   bottom: 200%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(10px);
   background-color: black;
   color: white;
   padding: 10px;
   border-radius: 8px;
   white-space: nowrap;
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
   z-index: 10;
 }
 
-header ul li:hover::before {
-  content: "";
-  position: absolute;
+header ul li::before {
   bottom: 110%;
-  left: 40%;
-  transform: translateX(-50%);
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
   border-width: 8px;
   border-style: solid;
   border-color: black transparent transparent transparent;
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
   z-index: 9;
+}
+
+header ul li:hover::after,
+header ul li:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
