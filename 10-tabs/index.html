@@ -9,7 +9,19 @@
   </head>
   <body>
     <main>
-      <h1>Hola, desde el inicio del proyecto</h1>
+      <div class="menu">
+        <button onclick="showTab('tab1')">Pestaña 1</button>
+        <button onclick="showTab('tab2')">Pestaña 2</button>
+        <button onclick="showTab('tab3')">Pestaña 3</button>
+        <button onclick="showTab('tab4')">Pestaña 4</button>
+      </div>
+
+      <div class="content">
+        <div id="tab1" class="tab-content">Contenido de la pestaña 1</div>
+        <div id="tab2" class="tab-content">Contenido de la pestaña 2</div>
+        <div id="tab3" class="tab-content">Contenido de la pestaña 3</div>
+        <div id="tab4" class="tab-content">Contenido de la pestaña 4</div>
+      </div>
     </main>
   </body>
 </html>
