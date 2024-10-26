@@ -31,6 +31,15 @@ button {
   transition: transform 0.3s ease;
 }
 
+button:hover {
+  transform: scale(1.04);
+}
+
+button.active {
+  border-bottom: 1px solid #7d7d7d;
+  color: #7d7d7d;
+}
+
 button {
   padding: 10px 20px;
   margin: 5px;
@@ -40,4 +49,14 @@ button {
 .tab-content {
   display: none;
   padding: 20px;
+}
+
+.tab-content img {
+  width: 100%;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 19px;
+  padding: 12px 0 12px;
 }
