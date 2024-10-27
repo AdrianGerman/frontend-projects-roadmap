@@ -12,11 +12,30 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100dvh;
 }
 
 main {
   padding: 20px;
+}
+
+/* content page */
+.content-page {
+  width: 600px;
+}
+
+.content-page .tab-content {
+  padding-bottom: 4rem;
+}
+
+.content-page .tab-content img {
+  width: 100%;
+  aspect-ratio: 16/8;
+}
+
+.content-page .title {
+  font-weight: bold;
+  font-size: 19px;
+  padding: 12px 0 12px;
 }
 
 .cookie-menu {
