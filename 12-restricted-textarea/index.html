@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restricted Textarea</title>
     <link rel="stylesheet" href="./styles.css" />
-    <script src="./main.js"></script>
+    <script src="./main.js" defer></script>
   </head>
   <body>
-    <main>
-      <h1>hola, desde el html</h1>
-    </main>
+    <div class="textarea-container">
+      <textarea
+        name="message"
+        id="message"
+        maxlength="250"
+        placeholder="Start typing..."
+      ></textarea>
+      <div id="charCount">0 / 250</div>
+    </div>
   </body>
 </html>
