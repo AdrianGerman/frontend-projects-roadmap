@@ -12,6 +12,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 2rem;
   height: 100dvh;
 }
 
@@ -34,6 +36,7 @@ body {
   border-radius: 7px;
   box-sizing: border-box;
   transition: border-color 0.3s;
+  font-family: inherit;
 }
 
 #message:focus {
