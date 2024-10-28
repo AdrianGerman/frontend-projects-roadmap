@@ -14,3 +14,46 @@ body {
   align-items: center;
   height: 100dvh;
 }
+
+.textarea-container {
+  position: relative;
+  width: 450px;
+  background-color: black;
+  border-radius: 7px;
+}
+
+#message {
+  resize: none;
+  width: 100%;
+  height: 160px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #242424;
+  border: 2px solid #000;
+  color: white;
+  border-radius: 7px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+#message:focus {
+  outline: none;
+}
+
+#message.char-limit {
+  border-color: red;
+  color: #de3939;
+}
+
+#charCount.char-limit {
+  color: red;
+  font-weight: bold;
+}
+
+#charCount {
+  color: #858585;
+  position: absolute;
+  bottom: 15px;
+  right: 10px;
+  font-size: 14px;
+}
