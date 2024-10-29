@@ -5,19 +5,209 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordion</title>
     <link rel="stylesheet" href="./styles.css" />
-    <script src="./main.js"></script>
+    <script src="./main.js" defer></script>
   </head>
   <body>
     <main>
       <h1>Preguntas frecuentes</h1>
-      <h3>Aquí se muestran unas de las preguntas más frecuentes</h3>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+      <div class="acordeon-item">
+        <div class="acordeon-header">
+          <h3>Pedido</h3>
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            class="icon icon-caret"
+            viewBox="0 0 10 6"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </div>
+        <div class="acordeon-content">
+          <ul>
+            <li>
+              <strong>¿Es posible modificar mi pedido?</strong>
+              <p>
+                Podrás cancelar, agregar o cambiar artículos en tu pedido,
+                siempre y cuando no se haya generado la guía de envío. Debes
+                escribir a shop@soporte.shop o a través de nuestro chat.
+                Envíanos tu número de orden, modelos y tallas que quieras
+                modificar o cancelar para que el proceso sea más rápido.
+              </p>
+            </li>
+            <li>
+              <strong>⚠️ Importante: </strong>No se permiten cambios de
+              dirección de entrega en compras pagadas con tarjeta de crédito,
+              débito o PayPal, sólo se podrán corregir algunos datos. Si pagaste
+              tu compra con Mercado Pago o Kueski sí podemos cambiar tu
+              dirección de entrega. Considera que si tu paquete ya cuenta con
+              una guía de envío, no será posible detener el proceso y tendrás
+              que esperar a recibirlo en tu domicilio.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="acordeon-item">
+        <div class="acordeon-header">
+          <h3>Envíos</h3>
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            class="icon icon-caret"
+            viewBox="0 0 10 6"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </div>
+        <div class="acordeon-content">
+          <ul>
+            <li>
+              <strong>¿Cuánto cuesta el envío?</strong>
+              <p>
+                El costo del envío a todo México es de $99 y en órdenes arriba
+                de $1299 es completamente GRATIS.
+              </p>
+            </li>
+            <li>
+              <strong>¿Cuál es el tiempo de entrega?</strong>
+              <p>
+                Procesamos en nuestro almacén los pedidos en un lapso de 48 a 72
+                horas hábiles, una vez preparado tu paquete te enviamos un
+                correo con tu número de rastreo para que puedas monitorearlo.
+                <br />
+                <br />
+                Entregamos nuestros pedidos en un tiempo de 5 a 7 días hábiles
+                aproximadamente en la mayor parte del país.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="acordeon-item">
+        <div class="acordeon-header">
+          <h3>Métodos de pago</h3>
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            class="icon icon-caret"
+            viewBox="0 0 10 6"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </div>
+        <div class="acordeon-content">
+          <ul>
+            <li>
+              <p>
+                Utilizamos MercadoPago y PayPal para asegurar que nuestras
+                transacciones sean 100% seguras.
+              </p>
+            </li>
+            <li>
+              <strong>PayPal: </strong>
+              <p>
+                Acepta tarjetas de débito y crédito VISA, MasterCard y American
+                Express.
+              </p>
+            </li>
+            <li>
+              <strong>MercadoPago</strong>
+              <p>
+                Ofrece la opción de Depósito en efectivo en OXXO, 7-Eleven y
+                muchísimas mas opciones. Acepta tarjetas de débito y crédito
+                VISA, MasterCard y American Express. Acepta transferencias
+                bancarias.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="acordeon-item">
+        <div class="acordeon-header">
+          <h3>Cambios y devoluciones</h3>
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            class="icon icon-caret"
+            viewBox="0 0 10 6"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </div>
+        <div class="acordeon-content">
+          <ul>
+            <li>
+              <strong>¿Cuentan con cambios y devoluciones?</strong>
+              <p>
+                Podemos hacer cambios dentro de los primeros 15 días a partir
+                del día en que recibes tu pedido. No realizamos devoluciones.
+              </p>
+            </li>
+            <li>
+              <strong>Artículos defectuosos o incorrectos </strong>
+              <p>
+                Cualquier artículo defectuoso o producto que sea diferente al
+                pedido original puede ser devuelto o cambiado dentro de los
+                primeros 10 días de haber recibido el artículo. Tenga en cuenta
+                que todo el artículo defectuoso(s) está sujeto a inspección.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="acordeon-item">
+        <div class="acordeon-header">
+          <h3>Facturas</h3>
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            class="icon icon-caret"
+            viewBox="0 0 10 6"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </div>
+        <div class="acordeon-content">
+          <ul>
+            <li>
+              <p>
+                Envíanos un correo a shop@elmariana.shop con toda tu
+                información. Es importante que la solicites antes de que termine
+                el mes en el que hiciste tu compra.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="acordeon-item"></div>
     </main>
   </body>
 </html>
