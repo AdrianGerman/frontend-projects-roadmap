@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/AdrianGerman/frontend-projects-roadmap/issues"
   },
-  "homepage": "https://github.com/AdrianGerman/frontend-projects-roadmap#readme"
+  "homepage": "https://github.com/AdrianGerman/frontend-projects-roadmap#readme",
+  "dependencies": {
+    "js-datepicker": "^5.18.3",
+    "luxon": "^3.5.0"
+  }
 }
