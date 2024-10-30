@@ -4,12 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Age Calculator</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/js-datepicker/dist/datepicker.min.css"
+    />
     <link rel="stylesheet" href="./styles.css" />
-    <script src="./index.js" type="module"></script>
+
+    <!-- Incluye Luxon y js-datepicker desde CDNs -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3/build/global/luxon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-datepicker/dist/datepicker.min.js"></script>
+    <script src="./index.js" defer></script>
   </head>
   <body>
     <main>
       <h1>Age Calculator</h1>
+      <form id="ageForm">
+        <label for="birthdate">Enter your birth date: </label>
+        <input type="text" id="birthdate" autocomplete="off" readonly />
+        <button type="submit">Calculate</button>
+      </form>
+      <div id="result"></div>
     </main>
   </body>
 </html>
