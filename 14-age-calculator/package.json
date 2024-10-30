@@ -1,0 +1,19 @@
+{
+  "name": "14-age-calculator",
+  "version": "1.0.0",
+  "description": "a example js project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdrianGerman/frontend-projects-roadmap.git"
+  },
+  "author": "AdrianGerman(heim)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdrianGerman/frontend-projects-roadmap/issues"
+  },
+  "homepage": "https://github.com/AdrianGerman/frontend-projects-roadmap#readme"
+}
