@@ -55,6 +55,12 @@ main h1 {
   outline: none;
 }
 
+.input-calendar svg {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+
 /* Estilo para el botón */
 button[type="submit"] {
   width: 100%;
