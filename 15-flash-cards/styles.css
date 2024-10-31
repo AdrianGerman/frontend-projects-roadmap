@@ -97,3 +97,18 @@ button:hover {
   flex-grow: 1;
   margin: 0 10px;
 }
+
+@media (max-width: 430px) {
+  .container {
+    width: 320px;
+    padding: 1rem;
+  }
+
+  button {
+    padding: 0;
+  }
+
+  .controls {
+    font-size: 0.9em;
+  }
+}
