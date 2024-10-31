@@ -5,7 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flash Cards</title>
     <link rel="stylesheet" href="./styles.css" />
-    <script src="./main.js"></script>
+    <script src="./main.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="progress-container">
+        <div class="progress-bar">
+          <div id="progress"></div>
+        </div>
+        <div class="progress-text">
+          <span id="progressPercentage">0%</span>
+          <span id="cardCounter">1 de 5</span>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="flashcard">
+          <div class="card-content" id="cardContent">Pregunta</div>
+        </div>
+
+        <div class="controls">
+          <button id="prevButton">‹ Anterior</button>
+          <button id="flipButton">Ver respuestas</button>
+          <button id="nextButton">Siguiente ›</button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
