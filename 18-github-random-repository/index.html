@@ -8,8 +8,17 @@
     <script src="./main.js" defer></script>
   </head>
   <body>
-    <div>
-      <h1>GitHub Random Repository</h1>
+    <div id="app" class="container">
+      <h1>GitHub Repository Finder</h1>
+      <div>
+        <select id="language-select">
+          <option value="">Selecciona un lenguaje</option>
+        </select>
+      </div>
+      <div id="state">
+        <!-- aquí se manejarán los estados de UI -->
+      </div>
+      <button id="refresh-btn" style="display: none">Refresh</button>
     </div>
   </body>
 </html>
