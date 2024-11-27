@@ -45,12 +45,17 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   const fetchRepository = (language) => {
-    stateDiv.innerHTML =
-      '<div class="loading">Cargando, por favor espera...</div>'
+    stateDiv.innerHTML = `
+      <div class="loading">
+        Cargando, por favor espera...
+      </div>
+    `
     refreshBtn.style.display = "none"
 
     const encodedLanguage = encodeURIComponent(language)
     const url = `https://api.github.com/search/repositories?q=language:${encodedLanguage}&sort=stars&order=desc`
+    // url para probar la vista de error
+    // const url = `https://api.github.com/search/error`
 
     fetch(url)
       .then((response) => {
@@ -70,11 +75,19 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .catch((error) => {
         stateDiv.innerHTML = `
-            <div class="error">
-              Error al obtener los repositorios. ${
-                error.message || "Por favor, intenta nuevamente."
-              }
-            </div>`
+          <div class="repo-info error-state">
+            <div class="repo-header">
+              <h3>Error</h3>
+              <p class="repo-description">
+                Error al obtener los repositorios. Por favor, intenta nuevamente.
+              </p>
+            </div>
+          </div>
+          <button id="retry-btn" class="retry-btn">Reintentar</button>
+        `
+
+        const retryButton = document.getElementById("retry-btn")
+        retryButton.addEventListener("click", () => fetchRepository(language))
         console.error(error)
       })
   }

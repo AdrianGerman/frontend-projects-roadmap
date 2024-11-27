@@ -70,29 +70,34 @@ select:focus {
   text-align: center;
 }
 
-.error {
-  background-color: #ff4c4c;
-  color: #fff;
-  padding: 1rem;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  text-align: center;
+.error-state .repo-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #ee1d1d;
 }
 
-.error button {
-  background-color: #ff1a1a;
+.error-state .repo-description {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #ff4c4c;
+}
+
+.retry-btn {
+  width: 100%;
+  background-color: #ff4c4c;
   color: white;
   border: none;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
   font-size: 1rem;
   cursor: pointer;
-  margin-top: 0.5rem;
-  transition: background-color 200ms;
+  margin-top: 1rem;
+  transition: transform 300ms, background-color 300ms;
 }
 
-.error button:hover {
+.retry-btn:hover {
   background-color: #e60000;
+  transform: scale(1.05);
 }
 
 .repo-info {
