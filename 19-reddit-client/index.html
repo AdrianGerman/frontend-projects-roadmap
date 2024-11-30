@@ -10,6 +10,24 @@
   <body>
     <main>
       <h1>Reddit Client</h1>
+      <div id="lanes" class="lanes"></div>
+      <button id="add-subreddit" class="add-button">+</button>
+
+      <!-- Modal para agregar subreddit -->
+      <div id="modal" class="modal hidden">
+        <div class="modal-content">
+          <h2>Add Subreddit</h2>
+          <input
+            type="text"
+            id="subreddit-input"
+            placeholder="Enter subreddit name"
+          />
+          <div class="modal-buttons">
+            <button id="confirm-button">Add</button>
+            <button id="cancel-button">Cancel</button>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>
