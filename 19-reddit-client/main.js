@@ -6,9 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const confirmButton = document.getElementById("confirm-button")
   const cancelButton = document.getElementById("cancel-button")
 
-  const savedLanes = JSON.parse(localStorage.getItem("lanes")) || []
-  savedLanes.forEach((subreddit) => addLane(subreddit))
-
   addButton.addEventListener("click", () => {
     modal.classList.remove("hidden")
     subredditInput.value = ""
@@ -30,26 +27,38 @@ document.addEventListener("DOMContentLoaded", () => {
   function addLane(subreddit) {
     const lane = document.createElement("div")
     lane.classList.add("lane")
+
     lane.innerHTML = `
-      <h2>${subreddit}</h2>
-      <button class="refresh-button">Refresh</button>
-      <button class="delete-button">Delete</button>
+      <h2>
+        r/${subreddit}
+        <span class="menu-icon">⋮</span>
+      </h2>
+      <div class="menu">
+        <button class="refresh-button">Refresh</button>
+        <button class="delete-button">Delete</button>
+      </div>
       <div class="posts"></div>
     `
 
     lanesContainer.appendChild(lane)
 
-    fetchPosts(subreddit, lane)
-    saveLane(subreddit)
+    const menuIcon = lane.querySelector(".menu-icon")
+    const menu = lane.querySelector(".menu")
+    menuIcon.addEventListener("click", () => {
+      menu.classList.toggle("open")
+    })
 
-    lane.querySelector(".refresh-button").addEventListener("click", () => {
+    const refreshButton = lane.querySelector(".refresh-button")
+    refreshButton.addEventListener("click", () => {
       fetchPosts(subreddit, lane)
     })
 
-    lane.querySelector(".delete-button").addEventListener("click", () => {
+    const deleteButton = lane.querySelector(".delete-button")
+    deleteButton.addEventListener("click", () => {
       lane.remove()
-      removeLane(subreddit)
     })
+
+    fetchPosts(subreddit, lane)
   }
 
   function fetchPosts(subreddit, lane) {
@@ -58,45 +67,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
     fetch(`https://www.reddit.com/r/${subreddit}.json`)
       .then((response) => {
-        if (!response.ok) {
-          throw new Error("Subreddit not found")
-        }
+        if (!response.ok) throw new Error("Subreddit not found")
         return response.json()
       })
       .then((data) => {
         postsContainer.innerHTML = ""
         const posts = data.data.children
-        if (posts.length === 0) {
-          postsContainer.innerHTML = "<p>No posts found.</p>"
-        } else {
-          posts.forEach((post) => {
-            const postElement = document.createElement("div")
-            postElement.classList.add("post")
-            postElement.innerHTML = `
-              <h3>${post.data.title}</h3>
-              <p>By: ${post.data.author}</p>
-              <p>Votes: ${post.data.ups}</p>
-            `
-            postsContainer.appendChild(postElement)
-          })
-        }
+        posts.forEach((post) => {
+          const postElement = document.createElement("div")
+          postElement.classList.add("post")
+
+          postElement.innerHTML = `
+            <div class="post-header">
+              <div class="vote-icon">
+                <p>⬆</p>
+                <p>${post.data.ups}</p>
+              </div>
+              <div>
+                <h3>${post.data.title}</h3>
+                <p>By: ${post.data.author}</p>
+              </div>
+            </div>
+          `
+          postsContainer.appendChild(postElement)
+        })
       })
       .catch((error) => {
         postsContainer.innerHTML = `<p>Error: ${error.message}</p>`
       })
-  }
-
-  function saveLane(subreddit) {
-    const lanes = JSON.parse(localStorage.getItem("lanes")) || []
-    if (!lanes.includes(subreddit)) {
-      lanes.push(subreddit)
-      localStorage.setItem("lanes", JSON.stringify(lanes))
-    }
-  }
-
-  function removeLane(subreddit) {
-    let lanes = JSON.parse(localStorage.getItem("lanes")) || []
-    lanes = lanes.filter((lane) => lane !== subreddit)
-    localStorage.setItem("lanes", JSON.stringify(lanes))
   }
 })
