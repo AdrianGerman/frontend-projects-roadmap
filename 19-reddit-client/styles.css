@@ -16,3 +16,151 @@ body {
   gap: 2rem;
   height: 100vh;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.add-button {
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #e03e00;
+}
+
+/* lanes  */
+
+.lanes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 90%;
+  justify-content: center;
+}
+
+.lane {
+  background-color: #333;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  height: 400px;
+  overflow-y: auto;
+}
+
+.lane h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #ff4500;
+}
+
+.post {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #555;
+}
+
+.post h3 {
+  font-size: 1rem;
+  color: white;
+}
+
+.post p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* modal */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.modal.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-content {
+  background: #333;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  color: white;
+}
+
+.modal-content h2 {
+  margin-bottom: 1rem;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background: #242424;
+  color: white;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.modal-buttons button {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#confirm-button {
+  background-color: #ff4500;
+  color: white;
+}
+
+#confirm-button:hover {
+  background-color: #e03e00;
+}
+
+#cancel-button {
+  background-color: #555;
+  color: white;
+}
+
+#cancel-button:hover {
+  background-color: #444;
+}
