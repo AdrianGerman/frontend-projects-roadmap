@@ -6,6 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const confirmButton = document.getElementById("confirm-button")
   const cancelButton = document.getElementById("cancel-button")
 
+  const savedLanes = JSON.parse(localStorage.getItem("lanes")) || []
+  savedLanes.forEach((subreddit) => {
+    addLane(subreddit, false)
+  })
+
   addButton.addEventListener("click", () => {
     modal.classList.remove("hidden")
     subredditInput.value = ""
@@ -19,12 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
   confirmButton.addEventListener("click", () => {
     const subreddit = subredditInput.value.trim()
     if (subreddit) {
-      addLane(subreddit)
+      addLane(subreddit, true)
       modal.classList.add("hidden")
     }
   })
 
-  function addLane(subreddit) {
+  function addLane(subreddit, save = true) {
     const lane = document.createElement("div")
     lane.classList.add("lane")
 
@@ -44,21 +49,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const menuIcon = lane.querySelector(".menu-icon")
     const menu = lane.querySelector(".menu")
-    menuIcon.addEventListener("click", () => {
+
+    menuIcon.addEventListener("click", (event) => {
+      event.stopPropagation()
       menu.classList.toggle("open")
+    })
+
+    document.addEventListener("click", (event) => {
+      if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
+        menu.classList.remove("open")
+      }
     })
 
     const refreshButton = lane.querySelector(".refresh-button")
     refreshButton.addEventListener("click", () => {
       fetchPosts(subreddit, lane)
+      menu.classList.remove("open")
     })
 
     const deleteButton = lane.querySelector(".delete-button")
     deleteButton.addEventListener("click", () => {
       lane.remove()
+      removeLaneFromLocalStorage(subreddit)
     })
 
     fetchPosts(subreddit, lane)
+
+    if (save) {
+      saveLaneToLocalStorage(subreddit)
+    }
   }
 
   function fetchPosts(subreddit, lane) {
@@ -95,5 +114,19 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch((error) => {
         postsContainer.innerHTML = `<p>Error: ${error.message}</p>`
       })
+  }
+
+  function saveLaneToLocalStorage(subreddit) {
+    const savedLanes = JSON.parse(localStorage.getItem("lanes")) || []
+    if (!savedLanes.includes(subreddit)) {
+      savedLanes.push(subreddit)
+      localStorage.setItem("lanes", JSON.stringify(savedLanes))
+    }
+  }
+
+  function removeLaneFromLocalStorage(subreddit) {
+    let savedLanes = JSON.parse(localStorage.getItem("lanes")) || []
+    savedLanes = savedLanes.filter((lane) => lane !== subreddit)
+    localStorage.setItem("lanes", JSON.stringify(savedLanes))
   }
 })
