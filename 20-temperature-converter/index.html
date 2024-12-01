@@ -9,7 +9,26 @@
   </head>
   <body>
     <main>
-      <h1>Temperature Converter</h1>
+      <div class="converter">
+        <h1>Temperature Converter</h1>
+        <form id="temp-form">
+          <input type="number" id="temperature" placeholder="0.00" required />
+          <select id="from-unit" required>
+            <option value="" disabled selected>From Unit</option>
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="Kelvin">Kelvin</option>
+          </select>
+          <select id="to-unit" required>
+            <option value="" disabled selected>To Unit</option>
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="Kelvin">Kelvin</option>
+          </select>
+          <button type="button" id="convert-btn" disabled>Convert</button>
+        </form>
+        <p id="result"></p>
+      </div>
     </main>
   </body>
 </html>
