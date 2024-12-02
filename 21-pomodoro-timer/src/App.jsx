@@ -3,11 +3,13 @@ import "./App.css"
 
 import Timer from "./components/Timer"
 import Controls from "./components/Controls"
+import SessionTracker from "./components/SessionTracker"
 
 function App() {
   const [time, setTime] = useState(25 * 60) // 25 minutes
   const [currentSession, setCurrentSession] = useState("Work")
   const [isRunning, setIsRunning] = useState(false)
+  const [workSessions, setWorkSessions] = useState(0)
 
   const handleStartStop = () => setIsRunning(!isRunning)
   const handleReset = () => {
@@ -25,6 +27,7 @@ function App() {
         onReset={handleReset}
         isRunning={isRunning}
       />
+      <SessionTracker workSessions={workSessions} />
     </>
   )
 }
