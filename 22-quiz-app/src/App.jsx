@@ -3,8 +3,7 @@ import "./App.css"
 function App() {
   return (
     <>
-      <h1>Quiz App</h1>
-      <button>hola k ase</button>
+      <h1 className="font-bold text-5xl">Quiz App</h1>
     </>
   )
 }
