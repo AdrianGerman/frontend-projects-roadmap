@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import "./App.css"
 
 import Timer from "./components/Timer"
@@ -6,16 +6,29 @@ import Controls from "./components/Controls"
 import SessionTracker from "./components/SessionTracker"
 
 function App() {
-  const [time, setTime] = useState(0.2 * 60) // 25 minutes
+  const [time, setTime] = useState(25 * 60)
   const [currentSession, setCurrentSession] = useState("Work")
   const [isRunning, setIsRunning] = useState(false)
   const [workSessions, setWorkSessions] = useState(0)
 
-  const handleStartStop = () => setIsRunning(!isRunning)
+  const audioRef = useRef(new Audio("/notification.mp3"))
+
+  const handleStartStop = () => {
+    if (!isRunning) {
+      audioRef.current.pause()
+      audioRef.current.currentTime = 0
+    }
+    setIsRunning(!isRunning)
+  }
+
   const handleReset = () => {
     setIsRunning(false)
     setCurrentSession("Work")
     setTime(25 * 60)
+    setWorkSessions(0)
+
+    audioRef.current.pause()
+    audioRef.current.currentTime = 0
   }
 
   useEffect(() => {
@@ -36,17 +49,25 @@ function App() {
   }, [isRunning])
 
   const handleSessionEnd = () => {
-    const audio = new Audio("/notification.mp3")
-    audio.play()
+    audioRef.current.play()
 
     if (currentSession === "Work") {
-      setWorkSessions((prev) => prev + 1)
-      setCurrentSession(workSessions % 4 === 3 ? "Long Break" : "Short Break")
-      setTime(workSessions % 4 === 3 ? 15 * 60 : 5 * 60)
+      const newWorkSessions = workSessions + 1
+      setWorkSessions(newWorkSessions)
+
+      if (newWorkSessions % 4 === 0) {
+        setCurrentSession("Long Break")
+        setTime(15 * 60)
+      } else {
+        setCurrentSession("Short Break")
+        setTime(5 * 60)
+      }
     } else {
       setCurrentSession("Work")
       setTime(25 * 60)
     }
+
+    setIsRunning(false)
   }
 
   return (

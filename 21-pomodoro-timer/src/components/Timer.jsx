@@ -6,7 +6,7 @@ const Timer = ({ time, session }) => {
 
   return (
     <div className="text-center">
-      <h2 className="text-2xl font-semibold">{session}</h2>
+      <h2 className="text-2xl font-semibold underline mb-4">{session}</h2>
       <div className="text-5xl font-mono mt-2">
         {minutes}:{seconds}
       </div>
