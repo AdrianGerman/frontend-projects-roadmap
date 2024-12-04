@@ -1,12 +1,21 @@
+import StartScreen from "./components/StartScreen"
+import useQuiz from "./context/useQuiz"
+import QuestionCard from "./components/QuestionCard"
+import questions from "./data/questions.json"
 import "./App.css"
 
-import StartScreen from "./components/StartScreen"
-
 function App() {
+  const { currentQuestionIndex } = useQuiz()
   return (
     <>
       <div className="min-h-screen flex flex-col items-center justify-center">
-        <StartScreen />
+        {currentQuestionIndex === 0 ? (
+          <StartScreen />
+        ) : currentQuestionIndex <= questions.length ? (
+          <QuestionCard />
+        ) : (
+          <p>Resultados</p>
+        )}
       </div>
     </>
   )
