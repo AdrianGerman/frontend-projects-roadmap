@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "question": "¿Cual es la capital de Francia?",
+    "options": ["Madrid", "Paris", "Berlín", "Roma"],
+    "answer": "París"
+  },
+  {
+    "id": 2,
+    "question": "¿Cual es el planeta más grande del sistema solar?",
+    "options": ["Marte", "Saturno", "Júpiter", "Venus"],
+    "answer": "Júpiter"
+  },
+  {
+    "id": 3,
+    "question": "¿Quién escribió 'Don Quijote'?",
+    "options": ["Cervantes", "Shakespeare", "Garcilaso", "Quevedo"],
+    "answer": "Cervantes"
+  }
+]
