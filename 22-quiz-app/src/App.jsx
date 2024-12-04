@@ -1,9 +1,13 @@
 import "./App.css"
 
+import StartScreen from "./components/StartScreen"
+
 function App() {
   return (
     <>
-      <h1 className="font-bold text-5xl">Quiz App</h1>
+      <div className="min-h-screen flex flex-col items-center justify-center">
+        <StartScreen />
+      </div>
     </>
   )
 }
