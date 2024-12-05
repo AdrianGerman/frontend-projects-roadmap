@@ -9,7 +9,8 @@ const QuestionCard = () => {
     recordAnswer,
     nextQuestion,
     timeLeft,
-    decrementTime
+    decrementTime,
+    score
   } = useQuiz()
   const [selectedOption, setSelectedOption] = useState(null)
 
@@ -69,9 +70,12 @@ const QuestionCard = () => {
           </button>
         ))}
       </div>
-      <p className="text-right text-gray-400 mt-6">
-        Tiempo restante: {timeLeft}
-      </p>
+      <div className="mt-6 text-gray-400 flex justify-between">
+        <p>
+          Puntuación: <strong>{score}</strong>
+        </p>
+        <p>Tiempo restante: {timeLeft}</p>
+      </div>
     </div>
   )
 }
