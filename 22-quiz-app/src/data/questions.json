@@ -2,7 +2,7 @@
   {
     "id": 1,
     "question": "¿Cual es la capital de Francia?",
-    "options": ["Madrid", "Paris", "Berlín", "Roma"],
+    "options": ["Madrid", "París", "Berlín", "Roma"],
     "answer": "París"
   },
   {

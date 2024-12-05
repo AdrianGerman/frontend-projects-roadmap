@@ -21,17 +21,25 @@ const QuestionCard = () => {
 
     if (timeLeft === 0) {
       nextQuestion()
+      setSelectedOption(null)
     }
 
     return () => clearInterval(timer)
   }, [timeLeft, decrementTime, nextQuestion])
+
+  useEffect(() => {
+    setSelectedOption(null)
+  }, [currentQuestionIndex])
 
   const handleAnswer = (option) => {
     setSelectedOption(option)
     if (option === question.answer) {
       incrementScore()
     }
-    setTimeout(nextQuestion, 2000)
+    setTimeout(() => {
+      nextQuestion()
+      setSelectedOption(null)
+    }, 2000)
   }
   return (
     <div className="bg-[#323232] shadow-md rounded p-6 max-w-lg w-full">
