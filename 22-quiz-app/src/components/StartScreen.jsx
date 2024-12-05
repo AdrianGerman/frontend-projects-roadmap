@@ -1,7 +1,7 @@
 import useQuiz from "../context/useQuiz"
 
 const StartScreen = () => {
-  const nextQuestions = useQuiz((state) => state.nextQuestions)
+  const nextQuestion = useQuiz((state) => state.nextQuestion)
 
   return (
     <div className="text-center">
@@ -10,8 +10,9 @@ const StartScreen = () => {
         Pon a prueba tus conocimientos. ¡Buena suerte!
       </p>
       <button
-        className="bg-purple-700 text-white py-2 px-4 rounded hover:bg-purple-900"
-        onClick={nextQuestions}
+        className="bg-purple-800 text-white py-2 px-4 rounded 
+        transform transition duration-300 hover:bg-purple-900 hover:scale-105"
+        onClick={() => nextQuestion()}
       >
         Iniciar
       </button>
