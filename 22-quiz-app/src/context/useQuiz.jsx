@@ -11,7 +11,7 @@ const useQuiz = create((set) => ({
       timeLeft: 60
     })),
   resetQuiz: () =>
-    set((state) => ({ timeLeft: state.timeLeft > 0 ? state.timeLeft - 1 : 0 })),
+    set(() => ({ score: 0, currentQuestionIndex: 0, timeLeft: 60 })),
   decrementTime: () =>
     set((state) => ({ timeLeft: state.timeLeft > 0 ? state.timeLeft - 1 : 0 }))
 }))
