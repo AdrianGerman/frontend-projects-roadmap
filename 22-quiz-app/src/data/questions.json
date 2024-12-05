@@ -16,5 +16,29 @@
     "question": "¿Quién escribió 'Don Quijote'?",
     "options": ["Cervantes", "Shakespeare", "Garcilaso", "Quevedo"],
     "answer": "Cervantes"
+  },
+  {
+    "id": 4,
+    "question": "¿Cuál es el elemento químico con símbolo H?",
+    "options": ["Helio", "Hidrógeno", "Hierro", "Helminto"],
+    "answer": "Hidrógeno"
+  },
+  {
+    "id": 5,
+    "question": "¿En qué año llegó el hombre a la Luna?",
+    "options": ["1969", "1975", "1980", "1965"],
+    "answer": "1969"
+  },
+  {
+    "id": 6,
+    "question": "¿Cuál es el océano más grande del mundo?",
+    "options": ["Atlántico", "Índico", "Pacífico", "Ártico"],
+    "answer": "Pacífico"
+  },
+  {
+    "id": 7,
+    "question": "¿Qué órgano del cuerpo humano bombea sangre?",
+    "options": ["Pulmones", "Cerebro", "Corazón", "Hígado"],
+    "answer": "Corazón"
   }
 ]

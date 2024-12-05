@@ -6,6 +6,7 @@ const QuestionCard = () => {
   const {
     currentQuestionIndex,
     incrementScore,
+    recordAnswer,
     nextQuestion,
     timeLeft,
     decrementTime
@@ -33,6 +34,9 @@ const QuestionCard = () => {
 
   const handleAnswer = (option) => {
     setSelectedOption(option)
+
+    recordAnswer(question.question, option, question.answer)
+
     if (option === question.answer) {
       incrementScore()
     }
@@ -41,6 +45,7 @@ const QuestionCard = () => {
       setSelectedOption(null)
     }, 2000)
   }
+
   return (
     <div className="bg-[#323232] shadow-md rounded p-6 max-w-lg w-full">
       <h2 className="text-2xl font-bold mb-4">{question.question}</h2>
