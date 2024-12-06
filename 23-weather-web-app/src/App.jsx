@@ -3,7 +3,7 @@ import "./App.css"
 function App() {
   return (
     <>
-      <h1>Aplicación del clima</h1>
+      <h1 className="font-bold text-4xl">Aplicación del clima</h1>
     </>
   )
 }
