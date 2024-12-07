@@ -4,6 +4,7 @@ import { fetchWeather } from "./utils/api"
 import WeatherSearch from "./components/WeatherSearch"
 import "./App.css"
 import WeatherDisplay from "./components/WeatherDisplay"
+import Loader from "./components/Loader"
 
 function App() {
   const [weatherData, setWeatherData] = useState(null)
@@ -34,7 +35,11 @@ function App() {
         <h1 className="font-bold text-xl mb-6">Aplicación del clima</h1>
         <WeatherSearch onSearch={handleSearch} />
 
-        {loading && <p className="mb-4">Cargando...</p>}
+        {loading && (
+          <div className="flex justify-center">
+            <Loader />
+          </div>
+        )}
         {error && <p className="mb-4">{error}</p>}
         {weatherData && <WeatherDisplay data={weatherData} />}
       </motion.div>
