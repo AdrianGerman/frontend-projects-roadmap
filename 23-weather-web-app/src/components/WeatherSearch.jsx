@@ -14,7 +14,7 @@ function WeatherSearch({ onSearch }) {
   return (
     <form onSubmit={handleSubmit} className="flex mb-6">
       <input
-        className="flex-grow p-2 px-4 border-none rounded-l-2xl text-base"
+        className="flex-grow p-2 px-4 border-none rounded-l-2xl text-base bg-[#e6dede] text-black"
         type="text"
         value={location}
         onChange={(e) => setLocation(e.target.value)}
