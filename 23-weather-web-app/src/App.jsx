@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import { fetchWeather } from "./utils/api"
 import WeatherSearch from "./components/WeatherSearch"
 import "./App.css"
+import WeatherDisplay from "./components/WeatherDisplay"
 
 function App() {
   const [weatherData, setWeatherData] = useState(null)
@@ -33,8 +34,9 @@ function App() {
         <h1 className="font-bold text-xl mb-6">Aplicación del clima</h1>
         <WeatherSearch onSearch={handleSearch} />
 
-        {loading && <p className="">Cargando...</p>}
-        {error && <p className="">{error}</p>}
+        {loading && <p className="mb-4">Cargando...</p>}
+        {error && <p className="mb-4">{error}</p>}
+        {weatherData && <WeatherDisplay data={weatherData} />}
       </motion.div>
     </div>
   )
