@@ -84,7 +84,7 @@ function App() {
   return (
     <div className="text-center text-white flex flex-col justify-center items-center py-20">
       <motion.div
-        initial={{ opacity: 0, y: -20 }}
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         className="bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-md max-w-md w-full"
@@ -93,22 +93,34 @@ function App() {
         <WeatherSearch onSearch={handleSearch} />
 
         {loading && (
-          <div className="flex justify-center">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex justify-center items-center min-h-[200px]"
+          >
             <Loader />
-          </div>
+          </motion.div>
         )}
         {error && <p className="mb-4">{error}</p>}
         {weatherData && (
           <WeatherDisplay data={weatherData} onUpdate={handleUpdate} />
         )}
       </motion.div>
+
       {weatherData && (
-        <div className="mt-8">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mt-8 w-full max-w-4xl"
+        >
           <WeatherTables
             hoursPast={weatherData.hoursPast}
             hoursFuture={weatherData.hoursFuture}
-          ></WeatherTables>
-        </div>
+          />
+        </motion.div>
       )}
     </div>
   )
