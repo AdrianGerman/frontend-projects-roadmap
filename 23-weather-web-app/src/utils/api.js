@@ -16,7 +16,9 @@ export const translateDescription = (description) => {
     "Clear night": "Noche despejada",
     "Cloudy night": "Noche nublada"
   }
-  return translations[description] || description
+
+  const conditions = description.split(",").map((cond) => cond.trim())
+  return conditions.map((cond) => translations[cond] || cond).join(", ")
 }
 
 export async function fetchWeather(location) {
@@ -51,11 +53,17 @@ export async function fetchWeather(location) {
       description: translateDescription(data.currentConditions.conditions),
       humidity: data.currentConditions.humidity,
       windSpeed: data.currentConditions.windspeed,
-      hoursPast,
-      hoursFuture
+      hoursPast: hoursPast.map((hour) => ({
+        ...hour,
+        description: translateDescription(hour.conditions)
+      })),
+      hoursFuture: hoursFuture.map((hour) => ({
+        ...hour,
+        description: translateDescription(hour.conditions)
+      }))
     }
   } catch (error) {
-    console.error("Error al obtener los datos metereológicos:", error)
+    console.error("Error al obtener los datos meteorológicos:", error)
     throw error
   }
 }
