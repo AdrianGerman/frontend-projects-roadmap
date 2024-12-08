@@ -5,6 +5,7 @@ import WeatherSearch from "./components/WeatherSearch"
 import WeatherDisplay from "./components/WeatherDisplay"
 import Loader from "./components/Loader"
 import "./App.css"
+import WeatherTables from "./components/weatherTables"
 
 function App() {
   const [weatherData, setWeatherData] = useState(null)
@@ -81,7 +82,7 @@ function App() {
   }
 
   return (
-    <div className="text-center text-white">
+    <div className="text-center text-white flex flex-col justify-center items-center py-20">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -101,6 +102,14 @@ function App() {
           <WeatherDisplay data={weatherData} onUpdate={handleUpdate} />
         )}
       </motion.div>
+      {weatherData && (
+        <div className="mt-8">
+          <WeatherTables
+            hoursPast={weatherData.hoursPast}
+            hoursFuture={weatherData.hoursFuture}
+          ></WeatherTables>
+        </div>
+      )}
     </div>
   )
 }

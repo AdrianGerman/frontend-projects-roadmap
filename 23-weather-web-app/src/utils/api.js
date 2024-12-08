@@ -2,7 +2,7 @@ import { reverseGeocode } from "./geocode"
 
 const API_KEY = import.meta.env.VITE_API_KEY
 
-const translateDescription = (description) => {
+export const translateDescription = (description) => {
   const translations = {
     Clear: "Despejado",
     "Partially cloudy": "Parcialmente nublado",
@@ -35,12 +35,24 @@ export async function fetchWeather(location) {
       ? await reverseGeocode(location)
       : data.resolvedAddress
 
+    const now = new Date()
+    const hoursPast = data.days[0].hours.filter((hour) => {
+      const hourDate = new Date(`${data.days[0].datetime}T${hour.datetime}`)
+      return hourDate < now
+    })
+    const hoursFuture = data.days[0].hours.filter((hour) => {
+      const hourDate = new Date(`${data.days[0].datetime}T${hour.datetime}`)
+      return hourDate >= now
+    })
+
     return {
       location: locationName,
       temperature: data.currentConditions.temp,
       description: translateDescription(data.currentConditions.conditions),
       humidity: data.currentConditions.humidity,
-      windSpeed: data.currentConditions.windspeed
+      windSpeed: data.currentConditions.windspeed,
+      hoursPast,
+      hoursFuture
     }
   } catch (error) {
     console.error("Error al obtener los datos metereológicos:", error)
