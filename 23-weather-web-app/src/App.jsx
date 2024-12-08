@@ -1,15 +1,50 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { fetchWeather } from "./utils/api"
 import WeatherSearch from "./components/WeatherSearch"
-import "./App.css"
 import WeatherDisplay from "./components/WeatherDisplay"
 import Loader from "./components/Loader"
+import "./App.css"
 
 function App() {
   const [weatherData, setWeatherData] = useState(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
+
+  const fetchWeatherByCurrentLocation = async () => {
+    setLoading(true)
+    setError("")
+    try {
+      if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(
+          async (position) => {
+            const { latitude, longitude } = position.coords
+            const location = `${latitude},${longitude}`
+            const data = await fetchWeather(location)
+            setWeatherData(data)
+            setLoading(false)
+          },
+          (err) => {
+            console.error("Error obteniendo la ubicación")
+            setError(
+              "No se pudo obtener la ubicación. Intente buscar manualmente"
+            )
+            setLoading(false)
+          }
+        )
+      } else {
+        setError("La geolocalización no es soportada en tu navegador")
+        setLoading(false)
+      }
+    } catch (error) {
+      setError("Error al obtener el clima de la ubicación actual")
+      setLoading(false)
+    }
+  }
+
+  useEffect(() => {
+    fetchWeatherByCurrentLocation()
+  }, [])
 
   const handleSearch = async (location) => {
     setLoading(true)

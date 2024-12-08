@@ -1,3 +1,5 @@
+import { reverseGeocode } from "./geocode"
+
 const API_KEY = import.meta.env.VITE_API_KEY
 
 const translateDescription = (description) => {
@@ -29,14 +31,19 @@ export async function fetchWeather(location) {
 
     const data = await response.json()
 
+    const locationName = /^[0-9.,-]+$/.test(data.resolvedAddress)
+      ? await reverseGeocode(location)
+      : data.resolvedAddress
+
     return {
-      location: data.resolvedAddress,
+      location: locationName,
       temperature: data.currentConditions.temp,
       description: translateDescription(data.currentConditions.conditions),
       humidity: data.currentConditions.humidity,
       windSpeed: data.currentConditions.windspeed
     }
   } catch (error) {
-    console.error("Error al obtener los datos metereologicos:", error)
+    console.error("Error al obtener los datos metereológicos:", error)
+    throw error
   }
 }
