@@ -1,4 +1,5 @@
 import { translateDescription } from "../utils/api"
+import { getWeatherIcon } from "../utils/weatherIcons"
 
 function WeatherTables({ hoursPast, hoursFuture }) {
   const renderTable = (title, hours) => (
@@ -26,7 +27,8 @@ function WeatherTables({ hoursPast, hoursFuture }) {
                 <td className="border border-blue-300 px-4 py-2 text-white">
                   {hour.datetime}
                 </td>
-                <td className="border border-blue-300 px-4 py-2 text-white">
+                <td className="border border-blue-300 px-4 py-2 text-white flex gap-2 items-center">
+                  {getWeatherIcon(translateDescription(hour.conditions))}
                   {hour.temp}°C
                 </td>
                 <td className="border border-blue-300 px-4 py-2 text-white">
