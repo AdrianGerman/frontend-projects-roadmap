@@ -5,7 +5,7 @@ import WeatherSearch from "./components/WeatherSearch"
 import WeatherDisplay from "./components/WeatherDisplay"
 import Loader from "./components/Loader"
 import "./App.css"
-import WeatherTables from "./components/weatherTables"
+import WeatherTables from "./components/WeatherTables"
 
 function App() {
   const [weatherData, setWeatherData] = useState(null)
