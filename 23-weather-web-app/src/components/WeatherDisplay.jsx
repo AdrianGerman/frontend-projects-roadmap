@@ -13,7 +13,7 @@ import {
   WiNightCloudy
 } from "react-icons/wi"
 
-function WeatherDisplay({ data }) {
+function WeatherDisplay({ data, onUpdate }) {
   const getWeatherIcon = (description) => {
     if (description.includes("Despejado")) return <WiDaySunny />
     if (description.includes("Parcialmente nublado")) return <WiDayCloudy />
@@ -45,6 +45,12 @@ function WeatherDisplay({ data }) {
         <span>Humedad: {data.humidity}%</span>
         <span>Viento: {data.windSpeed}km/h</span>
       </div>
+      <button
+        onClick={onUpdate}
+        className="mt-4 px-4 py-2 bg-purple-800 rounded transform transition duration-300 hover:bg-purple-900 hover:scale-105"
+      >
+        Actualizar
+      </button>
     </motion.div>
   )
 }

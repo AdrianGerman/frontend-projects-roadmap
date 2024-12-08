@@ -14,6 +14,8 @@ function App() {
   const fetchWeatherByCurrentLocation = async () => {
     setLoading(true)
     setError("")
+    setWeatherData(null)
+
     try {
       if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(
@@ -49,6 +51,8 @@ function App() {
   const handleSearch = async (location) => {
     setLoading(true)
     setError("")
+    setWeatherData(null)
+
     try {
       const data = await fetchWeather(location)
       setWeatherData(data)
@@ -59,6 +63,23 @@ function App() {
     }
     setLoading(false)
   }
+
+  const handleUpdate = async () => {
+    if (weatherData && weatherData.location) {
+      setLoading(true)
+      setError("")
+      setWeatherData(null)
+
+      try {
+        const data = await fetchWeather(weatherData.location)
+        setWeatherData(data)
+      } catch (error) {
+        setError("Error al actualizar los datos del clima.")
+      }
+      setLoading(false)
+    }
+  }
+
   return (
     <div className="text-center text-white">
       <motion.div
@@ -76,7 +97,9 @@ function App() {
           </div>
         )}
         {error && <p className="mb-4">{error}</p>}
-        {weatherData && <WeatherDisplay data={weatherData} />}
+        {weatherData && (
+          <WeatherDisplay data={weatherData} onUpdate={handleUpdate} />
+        )}
       </motion.div>
     </div>
   )
