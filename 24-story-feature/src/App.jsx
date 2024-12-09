@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-      <h1>24hr Story Feature</h1>
+      <h1 className="font-bold text-[3rem]">24hr Story Feature</h1>
     </>
   )
 }
