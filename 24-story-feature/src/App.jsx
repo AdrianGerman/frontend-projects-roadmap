@@ -7,6 +7,15 @@ function App() {
   const [stories, setStories] = useState([])
   const [currentStoryIndex, setCurrentStoryIndex] = useState(null)
 
+  useEffect(() => {
+    const storedStories = JSON.parse(localStorage.getItem("stories")) || []
+    const validStories = storedStories.filter((story) =>
+      moment().isBefore(moment(story.expiry))
+    )
+    setStories(validStories)
+    localStorage.setItem("stories", JSON.stringify(validStories))
+  }, [])
+
   const handleAddStory = (imageData) => {
     const newStory = {
       id: uuidv4(),
