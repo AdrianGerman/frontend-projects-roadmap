@@ -95,7 +95,8 @@ function App() {
       />
       {currentStoryIndex !== null && (
         <StoryViewer
-          story={stories[currentStoryIndex]}
+          stories={stories}
+          currentStoryIndex={currentStoryIndex}
           progress={progress}
           onNavigate={handleNavigation}
           onPause={handlePause}

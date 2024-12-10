@@ -1,6 +1,5 @@
 import { useEffect } from "react"
 import { useSwipeable } from "react-swipeable"
-
 import {
   XMarkIcon,
   ChevronLeftIcon,
@@ -10,7 +9,8 @@ import {
 } from "@heroicons/react/24/solid"
 
 const StoryViewer = ({
-  story,
+  stories,
+  currentStoryIndex,
   progress,
   onNavigate,
   onPause,
@@ -34,12 +34,28 @@ const StoryViewer = ({
       {...handlers}
       className="fixed top-0 left-0 w-screen h-screen bg-black flex justify-center"
     >
-      <div className="absolute top-0 left-0 w-full h-1 bg-gray-300">
-        <div
-          className="h-full bg-blue-500 transition-all"
-          style={{ width: `${progress}%` }}
-        ></div>
+      <div className="absolute top-0 left-0 w-full flex">
+        {stories.map((story, index) => (
+          <div
+            key={index}
+            className="h-1 flex-1 mx-0.5 bg-gray-300 relative overflow-hidden"
+          >
+            {index < currentStoryIndex && (
+              <div className="absolute top-0 left-0 h-full bg-blue-500 w-full"></div>
+            )}
+            {index === currentStoryIndex && (
+              <div
+                className="absolute top-0 left-0 h-full bg-blue-500"
+                style={{
+                  width: `${progress}%`,
+                  transition: progress === 0 ? "none" : "width 0.1s linear"
+                }}
+              ></div>
+            )}
+          </div>
+        ))}
       </div>
+
       <button
         onClick={onClose}
         className="absolute top-4 right-4 bg-red-500 w-10 h-10 rounded-full flex items-center justify-center transform transition duration-300 hover:bg-red-600 hover:scale-105"
@@ -59,7 +75,7 @@ const StoryViewer = ({
         <ChevronRightIcon className="w-6 h-6" />
       </button>
       <img
-        src={story.image}
+        src={stories[currentStoryIndex]?.image}
         alt="Story"
         onClick={onPause}
         className="max-w-full max-h-full object-contain cursor-pointer"
