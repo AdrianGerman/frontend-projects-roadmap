@@ -69,7 +69,7 @@ const StoryViewer = ({
         ))}
       </div>
 
-      <div className="absolute top-4 left-4 bg-black/50 text-white px-3 py-1 rounded-md text-sm shadow-md">
+      <div className="absolute top-5 left-2 bg-black/50 text-white px-3 py-1 rounded-md text-sm shadow-md">
         {dayjs(stories[currentStoryIndex]?.timestamp).format("hh:mm A")}
       </div>
 
@@ -83,25 +83,29 @@ const StoryViewer = ({
         <XMarkIcon className="w-8 h-6" />
       </button>
 
-      <button
-        onClick={(e) => {
-          e.stopPropagation()
-          onNavigate("PREV")
-        }}
-        className="hidden md:flex absolute top-1/2 left-4 transform -translate-y-1/2 bg-black/50 text-white text-xl w-10 h-10 rounded-full items-center justify-center hover:bg-black/70"
-      >
-        <ChevronLeftIcon className="w-6 h-6" />
-      </button>
+      {currentStoryIndex > 0 && (
+        <button
+          onClick={(e) => {
+            e.stopPropagation()
+            onNavigate("PREV")
+          }}
+          className="hidden md:flex absolute top-1/2 left-4 transform -translate-y-1/2 bg-black/50 text-white text-xl w-10 h-10 rounded-full items-center justify-center hover:bg-black/70"
+        >
+          <ChevronLeftIcon className="w-6 h-6" />
+        </button>
+      )}
 
-      <button
-        onClick={(e) => {
-          e.stopPropagation()
-          onNavigate("NEXT")
-        }}
-        className="hidden md:flex absolute top-1/2 right-4 transform -translate-y-1/2 bg-black/50 text-white text-xl w-10 h-10 rounded-full items-center justify-center hover:bg-black/70"
-      >
-        <ChevronRightIcon className="w-6 h-6" />
-      </button>
+      {currentStoryIndex < stories.length - 1 && (
+        <button
+          onClick={(e) => {
+            e.stopPropagation()
+            onNavigate("NEXT")
+          }}
+          className="hidden md:flex absolute top-1/2 right-4 transform -translate-y-1/2 bg-black/50 text-white text-xl w-10 h-10 rounded-full items-center justify-center hover:bg-black/70"
+        >
+          <ChevronRightIcon className="w-6 h-6" />
+        </button>
+      )}
 
       <div className="transition-opacity duration-300 flex items-center justify-center w-full h-full">
         <img
