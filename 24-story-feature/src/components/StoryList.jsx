@@ -41,7 +41,7 @@ const StoryList = ({ stories, onStoryClick, onAddStory }) => {
           >
             <div
               onClick={() => onStoryClick(index)}
-              className="w-16 h-16 rounded-full bg-cover bg-center cursor-pointer shadow-md transform transition duration-300 hover:scale-105"
+              className="w-16 h-16 rounded-full bg-cover bg-center cursor-pointer shadow-md transform transition duration-300 hover:scale-110"
               style={{ backgroundImage: `url(${story.image})` }}
             ></div>
             <span className="text-xs text-gray-500 text-center break-words">
