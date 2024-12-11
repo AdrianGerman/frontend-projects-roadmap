@@ -87,26 +87,30 @@ function App() {
   }
 
   return (
-    <>
-      <h1 className="font-bold text-[3rem]">24hr Story Feature</h1>
-      <StoryList
-        stories={stories}
-        onStoryClick={setCurrentStoryIndex}
-        onAddStory={handleAddStory}
-      />
-      {currentStoryIndex !== null && (
-        <StoryViewer
-          stories={stories}
-          currentStoryIndex={currentStoryIndex}
-          progress={progress}
-          onNavigate={handleNavigation}
-          onPause={handlePause}
-          onComplete={handleComplete}
-          onClose={closeStoryViewer}
-          isPaused={isPaused}
-        />
-      )}
-    </>
+    <div className="max-w-screen-md mx-auto">
+      <div className="p-4 bg-gradient-to-b from-[#242424] to-[#282828] min-h-screen">
+        <div>
+          <h1 className="font-bold text-[3rem]">Historias</h1>
+          <StoryList
+            stories={stories}
+            onStoryClick={setCurrentStoryIndex}
+            onAddStory={handleAddStory}
+          />
+          {currentStoryIndex !== null && (
+            <StoryViewer
+              stories={stories}
+              currentStoryIndex={currentStoryIndex}
+              progress={progress}
+              onNavigate={handleNavigation}
+              onPause={handlePause}
+              onComplete={handleComplete}
+              onClose={closeStoryViewer}
+              isPaused={isPaused}
+            />
+          )}
+        </div>
+      </div>
+    </div>
   )
 }
 
