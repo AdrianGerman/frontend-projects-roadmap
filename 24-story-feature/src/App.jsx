@@ -90,7 +90,7 @@ function App() {
     <div className="max-w-screen-md mx-auto">
       <div className="p-4 bg-gradient-to-b from-[#242424] to-[#282828] min-h-screen">
         <div>
-          <h1 className="font-bold text-[3rem]">Historias</h1>
+          <h1 className="font-bold text-3xl mb-4">Historias</h1>
           <StoryList
             stories={stories}
             onStoryClick={setCurrentStoryIndex}
