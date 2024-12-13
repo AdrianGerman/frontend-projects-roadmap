@@ -1,9 +1,13 @@
 ---
+import Main from "../components/Main.astro"
 import Layout from "../layouts/Layout.astro"
 ---
 
-<Layout>
-  <h1 class="text-3xl font-bold">Fronted projects of roadmap</h1>
+<Layout
+  title="Frontend projects of roadmap"
+  description="Web en donde recopilo todos los ejercicios de frontend solicitador por la web de roadmap.sh"
+>
+  <Main />
 </Layout>
 
 <style>
@@ -26,10 +30,10 @@ import Layout from "../layouts/Layout.astro"
       "Open Sans",
       "Helvetica Neue",
       sans-serif;
-    background-color: #242424;
+    background-color: #020617;
     color: white;
     display: flex;
-    justify-content: center;
+
     align-items: center;
     flex-direction: column;
     gap: 2rem;
