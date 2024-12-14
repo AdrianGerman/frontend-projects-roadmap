@@ -2,30 +2,50 @@
 import projects from "../data/projects"
 ---
 
-<div class="">
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
   {
     projects.map((project) => (
-      <article class="mb-12">
-        <img class="w-96" src={project.image} alt={project.title} />
-        <h2>{project.title}</h2>
-        <p>{project.description}</p>
-        <ul>
+      <article class="bg-[#01020568] border border-gray-200 rounded-lg shadow-lg p-6 transition-transform transform hover:-translate-y-2 hover:shadow-xl">
+        <img
+          class="w-full object-cover rounded-md mb-4"
+          src={project.image}
+          alt={project.title}
+        />
+        <h2 class="text-xl font-semibold text-gray-400 mb-2">
+          {project.title}
+        </h2>
+        <p class="text-gray-600 text-sm mb-4">{project.description}</p>
+        <ul class="flex flex-wrap gap-2 mb-4">
           {project.tags.map((tag) => (
-            <li class="bg-slate-700 mr-2 inline-block">{tag}</li>
+            <li class="bg-blue-900 text-white text-xs font-medium px-3 py-1 rounded-full">
+              {tag}
+            </li>
           ))}
         </ul>
-        <div>
-          <a href={project.repo} target="_blank">
+        <div class="flex gap-3 justify-start">
+          <a
+            class="bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-md hover:bg-blue-900 transition"
+            href={project.repo}
+            target="_blank"
+          >
             Código
           </a>
-          <a href={project.demo} target="_blank">
+          <a
+            class="bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-md hover:bg-blue-900 transition"
+            href={project.demo}
+            target="_blank"
+          >
             Demo
           </a>
-          <a href={project.details} target="_blank">
+          <a
+            class="bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-md hover:bg-blue-900 transition"
+            href={project.details}
+            target="_blank"
+          >
             Roadmap
           </a>
         </div>
       </article>
     ))
   }
-</div>
+</section>
