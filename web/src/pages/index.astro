@@ -8,17 +8,15 @@ import Content from "../components/Content.astro"
   title="Frontend projects of roadmap"
   description="Web en donde recopilo todos los ejercicios de frontend solicitador por la web de roadmap.sh"
 >
-  <Main />
-  <Content />
+  <main class="min-h-screen flex flex-col gap-y-20 relative">
+    <Main />
+    <div class="px-8">
+      <Content />
+    </div>
+  </main>
 </Layout>
 
 <style>
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
   body {
     font-family:
       system-ui,
@@ -34,11 +32,5 @@ import Content from "../components/Content.astro"
       sans-serif;
     background-color: #020617;
     color: white;
-    display: flex;
-
-    align-items: center;
-    flex-direction: column;
-    gap: 2rem;
-    height: 100vh;
   }
 </style>
