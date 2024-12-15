@@ -50,7 +50,18 @@ export default [
       "Crear tarjetas de recomendación para un sitio web utilizando HTML y CSS.",
     tags: ["HTML", "Layouts", "CSS", "Flexbox", "Positioning"],
     repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/05-testimonial-cards",
-    demo: "/05-testimonial-cards/index.htmll",
+    demo: "/05-testimonial-cards/index.html",
     details: "https://roadmap.sh/projects/testimonial-cards"
+  },
+  {
+    id: 6,
+    image: "/projects/06.webp",
+    title: "Datepicker UI",
+    description:
+      "Crear una interfaz de usuario de selector de fechas simple utilizando HTML y CSS.",
+    tags: ["HTML", "Layouts", "CSS", "Positioning"],
+    repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/06-datepicker-ui",
+    demo: "/06-datepicker-ui/index.html",
+    details: "https://roadmap.sh/projects/datepicker-ui"
   }
 ]
