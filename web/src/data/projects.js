@@ -118,5 +118,66 @@ export default [
     repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/11-cookie-consent",
     demo: "/projects/11-cookie-consent/index.html",
     details: "https://roadmap.sh/projects/cookie-consent"
+  },
+  {
+    id: 12,
+    image: "/images/12.webp",
+    title: "Restricted Texarea",
+    description:
+      "Crear un textarea con un recuento de caracteres en vivo, con un límite máximo de caracteres.",
+    tags: ["HTML", "CSS", "JavaScript", "DOM Manipulation"],
+    repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/12-restricted-textarea",
+    demo: "/projects/12-restricted-textarea/index.html",
+    details: "https://roadmap.sh/projects/restricted-textarea"
+  },
+  {
+    id: 13,
+    image: "/images/13.webp",
+    title: "Accordion",
+    description:
+      "Crear un componente de acordeón utilizando HTML, CSS y JavaScript.",
+    tags: ["HTML", "CSS", "JavaScript", "DOM Manipulation"],
+    repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/13-accordion",
+    demo: "/projects/13-accordion/index.html",
+    details: "https://roadmap.sh/projects/accordion"
+  },
+  {
+    id: 14,
+    image: "/images/14.webp",
+    title: "Age Calculator",
+    description:
+      "Crear una calculadora de edad utilizando HTML, CSS y JavaScript.",
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "DOM Manipulation",
+      "Package Management"
+    ],
+    repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/14-age-calculator",
+    demo: "/projects/14-age-calculator/index.html",
+    details: "https://roadmap.sh/projects/age-calculator"
+  },
+  {
+    id: 15,
+    image: "/images/15.webp",
+    title: "Flash Cards",
+    description:
+      "Crear una aplicación de flash cards utilizando frameworks de JavaScript.",
+    tags: ["HTML", "CSS", "JavaScript", "JavaScript Frameworks"],
+    repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/15-flash-cards",
+    demo: "/projects/15-flash-cards/index.html",
+    details: "https://roadmap.sh/projects/flash-cards"
+  },
+  {
+    id: 16,
+    image: "/images/16.webp",
+    title: "Custom Dropdown",
+    description:
+      "Crear un menú desplegable personalizado utilizando HTML, CSS y JavaScript.",
+    tags: ["HTML", "CSS", "JavaScript", "DOM Manipulation"],
+    repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/16-custom-dropdown",
+    demo: "/projects/16-custom-dropdown/index.html",
+    details: "https://roadmap.sh/projects/custom-dropdown"
   }
 ]
