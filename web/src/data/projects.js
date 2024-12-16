@@ -179,5 +179,56 @@ export default [
     repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/16-custom-dropdown",
     demo: "/projects/16-custom-dropdown/index.html",
     details: "https://roadmap.sh/projects/custom-dropdown"
+  },
+  {
+    id: 17,
+    image: "/images/17.webp",
+    title: "Task Tracker",
+    description:
+      "Crear un gestor de tareas con una lista de pendientes usando JavaScript.",
+    tags: ["HTML", "CSS", "JavaScript", "DOM Manipulation"],
+    repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/17-task-tracker",
+    demo: "/projects/17-task-tracker/index.html",
+    details: "https://roadmap.sh/projects/task-tracker-js"
+  },
+  {
+    id: 18,
+    image: "/images/18.webp",
+    title: "GitHub Random Repository",
+    description:
+      "Crear un buscador de repositorios aleatorios de GitHub usando la API de GitHub.",
+    tags: ["HTML", "CSS", "JavaScript", "API Integration", "DOM Manipulation"],
+    repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/18-github-random-repository",
+    demo: "/projects/18-github-random-repository/index.html",
+    details: "https://roadmap.sh/projects/github-random-repo"
+  },
+  {
+    id: 19,
+    image: "/images/19.webp",
+    title: "Reddit Client",
+    description:
+      "Crear un cliente de Reddit con secciones personalizables para subreddits.",
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "API Integration",
+      "DOM Manipulation",
+      "Asynchronous Programming"
+    ],
+    repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/19-reddit-client",
+    demo: "/projects/19-reddit-client/index.html",
+    details: "https://roadmap.sh/projects/reddit-client"
+  },
+  {
+    id: 20,
+    image: "/images/20.webp",
+    title: "Temperature Converter",
+    description:
+      "Crear un conversor de temperatura que convierta entre diferentes unidades.",
+    tags: ["HTML", "CSS", "JavaScript", "DOM Manipulation"],
+    repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/20-temperature-converter",
+    demo: "/projects/20-temperature-converter/index.html",
+    details: "https://roadmap.sh/projects/temperature-converter"
   }
 ]
