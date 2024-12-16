@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="componente realizado para ser funcional a futuro con js, formulario básico de completar de un perfil, cuenta o usuario"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessible Form UI</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <form class="form">
+        <div class="form-container">
+          <label for="fullname">Nombre completo:</label>
+          <input name="fullname" id="fullname" type="text" required />
+        </div>
+
+        <div class="form-container password-container">
+          <label for="email">Correo electrónico:</label>
+          <input name="email address" id="email" type="email" required />
+        </div>
+
+        <div class="form-container password-container">
+          <label for="password">Contraseña:</label>
+          <div class="password-input">
+            <input name="password" id="password" type="password" required />
+            <button class="toggle-password" aria-label="mostrar contraseña">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                <path
+                  d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="form-container">
+          <label for="confirm-password">Confirmar contraseña:</label>
+          <div class="password-input">
+            <input
+              name="repeat password"
+              id="confirm-password"
+              type="password"
+              required
+            />
+            <button class="toggle-password" aria-label="mostrar contraseña">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                <path
+                  d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" class="update-button">Actualizar perfil</button>
+      </form>
+
+      <section class="progress-container">
+        <div class="progress-circle"></div>
+        <div class="task-list">
+          <h3>Progreso del perfil</h3>
+          <ul>
+            <li class="completed">Crear cuenta</li>
+            <li class="completed">Verificar correo electrónico</li>
+            <li class="completed">Completar información básica</li>
+            <li>Completar el primer proyecto</li>
+            <li>Configurar preferencias</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

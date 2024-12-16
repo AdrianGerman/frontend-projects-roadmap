@@ -63,5 +63,60 @@ export default [
     repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/06-datepicker-ui",
     demo: "/projects/06-datepicker-ui/index.html",
     details: "https://roadmap.sh/projects/datepicker-ui"
+  },
+  {
+    id: 7,
+    image: "/images/07.webp",
+    title: "Accessible Form UI",
+    description:
+      "Crear una intefaz de usuario de formulario accesible utilizando HTML y CSS.",
+    tags: ["HTML", "Layouts", "CSS", "Positioning", "Accessibility"],
+    repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/07-accessible-form-ui",
+    demo: "/projects/07-accessible-form-ui/index.html",
+    details: "https://roadmap.sh/projects/accessible-form-ui"
+  },
+  {
+    id: 8,
+    image: "/images/08.webp",
+    title: "Image Grid Layout",
+    description:
+      "Crear un diseño de cuadrículas de imágenes utilizando HTML y CSS.",
+    tags: ["HTML", "CSS", "Grid Layout", "Responsive Design"],
+    repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/08-image-grid-layout",
+    demo: "/projects/08-image-grid-layout/index.html",
+    details: "https://roadmap.sh/projects/image-grid"
+  },
+  {
+    id: 9,
+    image: "/images/09.webp",
+    title: "Tooltip UI",
+    description:
+      "Crear una bandera de información para los elementos de navegación utilizando HTML y CSS.",
+    tags: ["HTML", "CSS", "Positioning", "Hover Effects"],
+    repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/09-tooltip-ui",
+    demo: "/projects/09-tooltip-ui/index.html",
+    details: "https://roadmap.sh/projects/tooltip-ui"
+  },
+  {
+    id: 10,
+    image: "/images/10.webp",
+    title: "Tabs",
+    description:
+      "Crear un componente de pestañas simple utilizando HTML, CSS y JavaScript.",
+    tags: ["HTML", "CSS", "JavaScript", "DOM Manipulation"],
+    repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/10-tabs",
+    demo: "/projects/10-tabs/index.html",
+    details: "https://roadmap.sh/projects/simple-tabs"
+  },
+  {
+    id: 11,
+    image: "/images/11.webp",
+    title: "Cookie Consent",
+    description:
+      "Crear un banner de consentimiento de cookies simple usando JavaScript.",
+    tags: ["HTML", "CSS", "JavaScript", "DOM Manipulation"],
+    repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/11-cookie-consent",
+    demo: "/projects/11-cookie-consent/index.html",
+    details: "https://roadmap.sh/projects/cookie-consent"
   }
 ]

@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #242424;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header ul li {
+  position: relative;
+  cursor: pointer;
+}
+
+header ul li::after,
+header ul li::before {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+header ul li::after {
+  content: "Here is everything I have built";
+  bottom: 200%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+header ul li::before {
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  border-width: 8px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+  z-index: 9;
+}
+
+header ul li:hover::after,
+header ul li:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}

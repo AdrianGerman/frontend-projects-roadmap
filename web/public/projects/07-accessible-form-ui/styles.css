@@ -1,0 +1,140 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #242424;
+  color: white;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: #323232;
+}
+
+input:focus,
+button:focus {
+  outline: 2px solid #a5a5a5;
+  outline-offset: 2px;
+}
+
+.form .form-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form .form-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.form .form-container input {
+  /* width: 100%; */
+  width: 250px;
+  padding: 8px;
+  border: 1px solid white;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #323232;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.form .form-container .password-input {
+  position: relative;
+}
+
+.form .form-container .toggle-password {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.form .update-button {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.form .update-button:hover {
+  transform: scale(1.1);
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress-container .progress-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: conic-gradient(#323232 180deg, #eee 0deg);
+  box-shadow: inset 0px 0px 19px 0px #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-container .progress-circle::before {
+  content: "77%";
+  width: 60px;
+  height: 60px;
+  background: #323232;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.progress-container .task-list h3 {
+  text-align: center;
+}
+
+.progress-container .task-list ul {
+  list-style: none;
+  background-color: #202020;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.progress-container .task-list li {
+  margin-bottom: 5px;
+}
+
+.task-list li.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+.task-list li::before {
+  content: "✓";
+  margin-right: 5px;
+}
