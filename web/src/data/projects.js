@@ -230,5 +230,54 @@ export default [
     repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/20-temperature-converter",
     demo: "/projects/20-temperature-converter/index.html",
     details: "https://roadmap.sh/projects/temperature-converter"
+  },
+  {
+    id: 21,
+    image: "/images/21.webp",
+    title: "Pomodoro Timer",
+    description:
+      "Crear una aplicación de Pomodoro para mejorar la productividad.",
+    tags: ["HTML", "CSS", "JavaScript", "Frameworks"],
+    repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/21-pomodoro-timer",
+    demo: "url",
+    details: "https://roadmap.sh/projects/pomodoro-timer"
+  },
+  {
+    id: 22,
+    image: "/images/22.webp",
+    title: "Quiz App",
+    description:
+      "Crear una aplicación de preguntas basada en el navegador para poner a prueba tus conocimientos.",
+    tags: ["HTML", "CSS", "JavaScript", "Frameworks"],
+    repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/22-quiz-app",
+    demo: "url",
+    details: "https://roadmap.sh/projects/quiz-app"
+  },
+  {
+    id: 23,
+    image: "/images/23.webp",
+    title: "Weather Web App",
+    description: ".",
+    tags: [
+      "Programming Language",
+      "3rd Party APIs",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/23-weather-web-app",
+    demo: "url",
+    details: "https://roadmap.sh/projects/weather-app"
+  },
+  {
+    id: 24,
+    image: "/images/24.webp",
+    title: "24hr Story Feature",
+    description:
+      "Crear un clon de la función de 'Historias' de Instagram del lado del cliente.",
+    tags: ["JavaScript", "Storage", "Timeouts"],
+    repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/24-story-feature",
+    demo: "url",
+    details: "https://roadmap.sh/projects/stories-feature"
   }
 ]
