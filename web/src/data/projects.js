@@ -239,7 +239,7 @@ export default [
       "Crear una aplicación de Pomodoro para mejorar la productividad.",
     tags: ["HTML", "CSS", "JavaScript", "Frameworks"],
     repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/21-pomodoro-timer",
-    demo: "url",
+    demo: "https://frontend-projects-roadmap-pomodoro.vercel.app/",
     details: "https://roadmap.sh/projects/pomodoro-timer"
   },
   {
@@ -250,14 +250,15 @@ export default [
       "Crear una aplicación de preguntas basada en el navegador para poner a prueba tus conocimientos.",
     tags: ["HTML", "CSS", "JavaScript", "Frameworks"],
     repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/22-quiz-app",
-    demo: "url",
+    demo: "https://frontend-projects-roadmap-quiz-app.vercel.app/",
     details: "https://roadmap.sh/projects/quiz-app"
   },
   {
     id: 23,
     image: "/images/23.webp",
     title: "Weather Web App",
-    description: ".",
+    description:
+      "Crear una aplicación metereológica que obtenga y muestre el clima para una ubicación seleccionada.",
     tags: [
       "Programming Language",
       "3rd Party APIs",
@@ -266,7 +267,7 @@ export default [
       "CSS"
     ],
     repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/23-weather-web-app",
-    demo: "url",
+    demo: "https://frontend-projects-roadmap-weather-app.vercel.app/",
     details: "https://roadmap.sh/projects/weather-app"
   },
   {
@@ -277,7 +278,7 @@ export default [
       "Crear un clon de la función de 'Historias' de Instagram del lado del cliente.",
     tags: ["JavaScript", "Storage", "Timeouts"],
     repo: "https://github.com/AdrianGerman/frontend-projects-roadmap/tree/main/24-story-feature",
-    demo: "url",
+    demo: "https://frontend-projects-roadmap-h4qn.vercel.app/",
     details: "https://roadmap.sh/projects/stories-feature"
   }
 ]
